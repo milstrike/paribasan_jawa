@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/logobgmain">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/mainLayout">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:id="@+id/linearLayout">
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchindonesia"
+                android:background="#ffffffff"
+                android:padding="10dp"
+                android:hint="Masukkan kata"
+                android:maxLines="1"
+                android:minLines="1"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/listviewindonesia"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#BBFFFFFF"
+            android:layout_marginBottom="10dp"
+            android:requiresFadingEdge="vertical"
+            android:fadingEdgeLength="48sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black50"
+        android:id="@+id/tampilArtiLayout"
+        android:visibility="gone"
+        android:onClick="closeInAction">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/white100"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimary"
+                android:id="@+id/tutupArtiLayout"
+                android:onClick="closeInAction">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Tutup"
+                    android:id="@+id/textView8"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/white100"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Paribasan:"
+                android:id="@+id/textView9"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="teksParibasan"
+                android:id="@+id/tampilJawa"
+                android:layout_below="@+id/textView9"
+                android:layout_alignLeft="@+id/textView9"
+                android:layout_alignStart="@+id/textView9"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Arti Jawa:"
+                android:id="@+id/textView11"
+                android:textStyle="bold"
+                android:layout_below="@+id/tampilJawa"
+                android:layout_alignLeft="@+id/tampilJawa"
+                android:layout_alignStart="@+id/tampilJawa"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="teksJawa"
+                android:id="@+id/tampilIndonesia"
+                android:layout_below="@+id/textView11"
+                android:layout_alignLeft="@+id/tampilJawa"
+                android:layout_marginBottom="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Arti Indonesia:"
+                android:id="@+id/textView12"
+                android:textStyle="bold"
+                android:layout_below="@+id/tampilIndonesia"
+                android:layout_alignLeft="@+id/tampilIndonesia"
+                android:layout_alignStart="@+id/tampilIndonesia"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="TeksIndonesia"
+                android:id="@+id/artiIndonesia"
+                android:layout_below="@+id/textView12"
+                android:layout_alignLeft="@+id/tampilIndonesia" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
